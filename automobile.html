@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobile Selling Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            color: #333;
+        }
+        header {
+            background: #00796b;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: slideIn 0.5s ease-in-out;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc80;
+        }
+        section {
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #d32f2f;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .item-card {
+            background: #fff;
+            border-radius: 10px;
+            margin: 15px;
+            padding: 15px;
+            display: inline-block;
+            width: calc(33% - 40px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .item-card img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.5s;
+        }
+        .item-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        .item-card:hover img {
+            transform: scale(1.1);
+        }
+        button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        button:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #00796b;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .item-card {
+                width: calc(50% - 40px);
+            }
+        }
+        @media (max-width: 480px) {
+            .item-card {
+                width: 100%;
+            }
+        }
+        #contact {
+            text-align: center;
+            background: #ffe082;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Automobile Selling Platform</h1>
+    <nav>
+        <a href="#cars">Cars</a>
+        <a href="#bikes">Bikes</a>
+        <a href="#ships">Ships</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+</header>
+<main>
+    <section id="cars">
+        <h2>Available Cars</h2>
+        <div class="item-card">
+            <img src="images.jpg" alt="Tata Nexon">
+            <h3>Tata Nexon</h3>
+            <p>Price: ₹10,640,0000</p> <!-- $20,000 -->
+            <button onclick="addToCart('Car Model 1')">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="image2.jpg" alt="Rang rover Evoqe">
+            <h3>Rang rover Evoqe</h3>
+            <p>Price: ₹4,050,0000</p> <!-- $25,000 -->
+            <button onclick="addToCart('Car Model 2')">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="images 3.jpg" alt="audi 18l">
+            <h3>Audi A8L</h3>
+            <p>Price: ₹2,460,0000</p> <!-- $30,000 -->
+            <button onclick="addToCart('Car Model 3')">Add to Cart</button>
+        </div>
+    </section>
+    <section id="bikes">
+        <h2>Available Bikes</h2>
+        <div class="item-card">
+            <img src="image4.jpg" alt="KTM RC390">
+            <h3>KTM RC390</h3>
+            <p>Price: ₹410,000</p> <!-- $5,000 -->
+            <button onclick="addToCart('Bike Model 1')">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="images (1).jpg" alt="MV Agusta f3">
+            <h3>MV Agusta f3</h3>
+            <p>Price: ₹1570,000</p> <!-- $7,000 -->
+            <button onclick="addToCart('Bike Model 2')">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="images (2).jpg" alt="Suzuki gsxr1000">
+            <h3>Suzuki gsxr1000</h3>
+            <p>Price: ₹1740,000</p> <!-- $9,000 -->
+            <button onclick="addToCart('Bike Model 3')">Add to Cart</button>
+        </div>
+    </section>
+    <section id="ships">
+        <h2>Available Ships</h2>
+        <div class="item-card">
+            <img src="images (3).jpg" alt="luminance">
+            <h3>luminanace</h3>
+            <p>Price: ₹8,200,00000</p> <!-- $100,000 -->
+            <button onclick="addToCart('luminance')">Add to Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="images (4).jpg" alt="Horizon">
+            <h3>Horzion</h3>
+            <p>Price: ₹24,600,00000</p> <!-- $300,000 -->
+            <button onclick="addToCart('Horizon')">Add to Cart</button>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out!</p>
+        <p>Email: info@automobileselling.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Automobile Selling Platform. All Rights Reserved.</p>
+</footer>
+<script>
+    function addToCart(model) {
+        const userName = prompt("Enter your name:");
+        const userNumber = prompt("Enter your phone number:");
+        const userAddress = prompt("Enter your address:");
+        if (userName && userNumber && userAddress) {
+            alert(`Added ${model} to cart.\nName: ${userName}\nPhone: ${userNumber}\nAddress: ${userAddress}`);
+            console.log({model, userName, userNumber, userAddress});
+        } else {
+            alert("Please provide all the details.");
+        }
+    }
+</script>
+</body>
+</html>
